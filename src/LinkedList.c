@@ -1,7 +1,29 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <stdbool.h>
+
+struct node {
+	int data;
+	struct node *next;
+};
+
+struct node *head = NULL;
+
+bool isEmpty() {
+	return head == NULL;
+}
+
+int length() {
+	int length = 0;
+	struct node *current = head;
+	while(current != NULL) {
+		length++;
+		current = current->next;
+	}
+	return length;
+}
+
 int main()
 {
-    printf("Hello World");
-    getchar();
-    return 0;
+    printf("Is empty: %s \n", isEmpty()? "true" : "false");
 }
