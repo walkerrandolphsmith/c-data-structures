@@ -23,6 +23,16 @@ int length() {
 	return length;
 }
 
+int add(element) {
+	if(head === NULL) {
+		head->data = element;
+	} else {
+		struct node *link = (struct node*) malloc(sizeof(struct node));
+		link->data = element;
+		head = link;
+	}
+}
+
 int main()
 {
     printf("Is empty: %s \n", isEmpty()? "true" : "false");
