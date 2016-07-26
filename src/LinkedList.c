@@ -5,6 +5,9 @@
 struct node {
 	int data;
 	struct node *next;
+	bool contains(element) {
+		return data == element || next.contains(element);
+	}
 };
 
 struct node *head = NULL;
@@ -30,6 +33,14 @@ int add(element) {
 		struct node *link = (struct node*) malloc(sizeof(struct node));
 		link->data = element;
 		head = link;
+	}
+}
+
+bool contians(elemet) {
+	if(head == NULL) {
+		return false;
+	} else {
+		return head.contains(element);
 	}
 }
 
