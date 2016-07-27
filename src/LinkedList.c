@@ -27,7 +27,7 @@ int length() {
 }
 
 int add(element) {
-	if(head === NULL) {
+	if(head == NULL) {
 		head->data = element;
 	} else {
 		struct node *link = (struct node*) malloc(sizeof(struct node));
