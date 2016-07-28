@@ -26,7 +26,7 @@ int length() {
 	return length;
 }
 
-int add(element) {
+void add(int element) {
 	if(head == NULL) {
 		head->data = element;
 	} else {
